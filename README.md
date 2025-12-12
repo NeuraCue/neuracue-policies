@@ -32,3 +32,23 @@ It serves as the landing and compliance site for the NeuraCue Android applicatio
 Content in this repository is licensed under
 the [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).  
 NeuraCue™ and the NeuraCue logo are trademarks. All rights reserved.
+
+## Vercel Security
+
+We're following up on our earlier communication regarding CVE-2025-55182, the critical RCE
+vulnerability affecting React Server Components.
+
+We want to be direct: if you have not yet upgraded, please do so immediately. That is the only way
+to be safe. Since our initial outreach, public exploits are available and threat activity has
+significantly increased. As of today, Vercel has blocked all new deployments of vulnerable Next.js
+versions.
+
+Your next step: upgrade to a patched version of Next.js (15.0.5, 15.1.9, 15.2.6, 15.3.6, 15.4.8,
+15.5.7, or 16.0.7). See blog post for full details and remediation guidance. We will continue to
+update this blog as needed.
+
+When you upgrade to Next 15 or 16, go straight to a patched version (e.g. 15.0.5+, 15.1.9+, 15.2.6+,
+15.3.6+, 15.4.8+, 15.5.7+, or 16.0.7+).
+
+You can upgrade straight from 14.2.0 → 16.0.9 (no need to stop at 15 first), just:
+`npm install next@16.0.9`
