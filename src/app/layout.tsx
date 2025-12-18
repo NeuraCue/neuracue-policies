@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'NeuraCue',
   description:
     'Policy and compliance pages for the NeuraCue Android app on Google Play. AI-powered geofenced reminders.',
-  metadataBase: new URL('https://neuracue.com'),
+  metadataBase: new URL('https://www.neuracue.com'),
   alternates: {
     canonical: '/',
   },

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "NeuraCue's privacy policy for the Android app on Google Play, covering location data, analytics, crash reports, user controls, and contact information.",
   alternates: {
-    canonical: 'https://neuracue.com/privacy',
+    canonical: '/privacy',
   },
   openGraph: {
     title: 'Privacy Policy - NeuraCue',

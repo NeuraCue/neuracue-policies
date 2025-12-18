@@ -6,9 +6,6 @@ export const metadata: Metadata = {
   title: 'NeuraCue',
   description:
     'Policy and compliance pages for the NeuraCue Android app on Google Play. AI-powered geofenced reminders.',
-  alternates: {
-    canonical: 'https://neuracue.com/',
-  },
   openGraph: {
     images: [
       {

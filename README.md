@@ -44,11 +44,15 @@ significantly increased. As of today, Vercel has blocked all new deployments of 
 versions.
 
 Your next step: upgrade to a patched version of Next.js (15.0.5, 15.1.9, 15.2.6, 15.3.6, 15.4.8,
-15.5.7, or 16.0.7). See blog post for full details and remediation guidance. We will continue to
-update this blog as needed.
+[See blog post for full details and remediation guidance.](https://vercel.com/blog/security-update-nextjs-rce-cve-2025-55182)
+We will continue to update this blog as needed.
 
 When you upgrade to Next 15 or 16, go straight to a patched version (e.g. 15.0.5+, 15.1.9+, 15.2.6+,
 15.3.6+, 15.4.8+, 15.5.7+, or 16.0.7+).
 
-You can upgrade straight from 14.2.0 → 16.0.9 (no need to stop at 15 first), just:
-`npm install next@16.0.9`
+**⚠️ Warning:** Upgrading directly from 14.2.0 to 16.0.9 skips two major versions and may introduce
+breaking changes.  
+Before upgrading, **review the official Next.js migration guides**
+for [v15](https://nextjs.org/docs/pages/building-your-application/upgrading/version-15)
+and [v16](https://nextjs.org/docs/pages/building-your-application/upgrading/version-16) to
+understand required code modifications.
