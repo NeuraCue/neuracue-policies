@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service - NeuraCue',
   description: 'Terms of Service for the NeuraCue Android application.',
   alternates: {
-    canonical: 'https://neuracue.com/terms',
+    canonical: '/terms',
   },
   openGraph: {
     title: 'Terms of Service - NeuraCue',
