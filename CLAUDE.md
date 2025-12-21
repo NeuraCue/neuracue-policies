@@ -1,12 +1,16 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this
+repository.
 
 ## Project Overview
 
-This is the **NeuraCue public-facing website** — a Next.js static site deployed on Vercel at `neuracue.com`. It serves as the landing page and policy/compliance site for the NeuraCue Android app (geofenced AI-powered reminders).
+This is the **NeuraCue public-facing website** — a Next.js static site deployed on Vercel at
+`neuracue.com`. It serves as the landing page and policy/compliance site for the NeuraCue Android
+app (geofenced AI-powered reminders).
 
-The core NeuraCue Android app repository is private. This public repo contains only the web presence and required legal documentation for Google Play compliance.
+The core NeuraCue Android app repository is private. This public repo contains only the web presence
+and required legal documentation for Google Play compliance.
 
 ## Architecture
 
@@ -53,7 +57,8 @@ The core NeuraCue Android app repository is private. This public repo contains o
 
 ### React Components & TypeScript
 
-- **React Server Components**: Default in App Router (except client components marked with `'use client'`)
+- **React Server Components**: Default in App Router (except client components marked with
+  `'use client'`)
 - **Client Components**: Used for interactivity (Footer with live clock, CurrentDate)
 - **Metadata API**: Page-level metadata using Next.js Metadata export
   ```typescript
@@ -76,7 +81,8 @@ The core NeuraCue Android app repository is private. This public repo contains o
 
 ### Dynamic Features
 
-- **Live clock**: React component in `src/components/Footer.tsx` displays Pacific time with auto-updating seconds
+- **Live clock**: React component in `src/components/Footer.tsx` displays Pacific time with
+  auto-updating seconds
 - **Dynamic dates**: `CurrentDate` component for effective dates on legal pages
 - **Schema.org markup**: JSON-LD structured data in root layout for SEO
 - **Client-side hydration**: Used only where necessary (clock, dates)
@@ -87,21 +93,23 @@ The core NeuraCue Android app repository is private. This public repo contains o
 
 ```bash
 # Install dependencies
-npm install
+yarn install
+# or simply
+yarn
 
 # Run development server (with hot reload)
-npm run dev
+yarn dev
 # Opens at http://localhost:3000
 
 # Build for production (static export)
-npm run build
+yarn build
 # Output in /out directory
 
 # Start production server (after build)
-npm start
+yarn start
 
 # Lint code
-npm run lint
+yarn lint
 ```
 
 ### Deployment
@@ -117,8 +125,9 @@ git push origin main
 ```
 
 **Manual deployment** (requires Vercel CLI):
+
 ```bash
-npm install -g vercel
+yarn global add vercel
 vercel --prod
 ```
 
@@ -170,7 +179,8 @@ vercel --prod
 
 ### Modifying Existing Pages
 
-- **Privacy/Terms**: Edit `src/app/privacy/page.tsx` or `src/app/terms/page.tsx`. Dates update via `<CurrentDate />` component
+- **Privacy/Terms**: Edit `src/app/privacy/page.tsx` or `src/app/terms/page.tsx`. Dates update via
+  `<CurrentDate />` component
 - **Landing page**: Edit `src/app/page.tsx` content section
 - **Footer**: Edit `src/components/Footer.tsx` to affect all pages
 - **Layout**: Edit `src/app/layout.tsx` for site-wide structure or metadata changes
@@ -190,27 +200,36 @@ vercel --prod
 ### Update Site Metadata
 
 Edit `src/app/layout.tsx` metadata export:
+
 ```typescript
 export const metadata: Metadata = {
-  title: 'NeuraCue',
-  description: 'Policy and compliance pages for the NeuraCue Android app...',
-  // ...
+    title: 'NeuraCue',
+    description: 'Policy and compliance pages for the NeuraCue Android app...',
+    // ...
 };
 ```
 
 ### Change Color Scheme
 
 Edit `src/app/globals.css`:
+
 ```css
 body {
-  background: #191970;  /* Dark blue */
-  color: #fff;          /* White text */
+    background: #191970; /* Dark blue */
+    color: #fff; /* White text */
 }
 ```
 
 Footer accent color in `src/components/Footer.tsx`:
+
 ```typescript
-<footer style={{ color: '#FF7A1A' }}>  {/* Orange */}
+<footer style = {
+{
+    color: '#FF7A1A'
+}
+}>
+{/* Orange */
+}
 ```
 
 ### Add/Update Images
@@ -234,6 +253,7 @@ Footer accent color in `src/components/Footer.tsx`:
 ### Modify Live Clock
 
 The clock displays Pacific time by default. To change timezone, edit `src/components/Footer.tsx`:
+
 ```typescript
 const ZONE = 'America/Los_Angeles';  // Change to desired timezone
 ```
@@ -248,13 +268,15 @@ git clone https://github.com/NeuraCue/website.git
 cd website
 
 # Install dependencies
-npm install
+yarn install
+# or simply
+yarn
 
 # Make changes
 # ... edit files ...
 
 # Test locally
-npm run dev
+yarn dev
 
 # Commit and push
 git add .
@@ -268,11 +290,12 @@ git push origin main
 
 - **This is a public repository** — never commit sensitive data (API keys, credentials, PII)
 - **Vercel deployment**:
-  - Automatic builds from `main` branch
-  - Deploy previews for all branches
-  - Custom domain configured via Vercel dashboard
-  - Edge network for fast global delivery
-- **Mobile app is private** — This repo only contains web presence; actual Android app is in a separate private repository
+    - Automatic builds from `main` branch
+    - Deploy previews for all branches
+    - Custom domain configured via Vercel dashboard
+    - Edge network for fast global delivery
+- **Mobile app is private** — This repo only contains web presence; actual Android app is in a
+  separate private repository
 - **Custom domain**: Configured through DNS provider (pointing to Vercel) + `public/CNAME` file
 
 ## Vercel-Specific Features
@@ -302,4 +325,5 @@ When working with AI tools on this codebase:
 
 ## Support
 
-For issues with this website repository, contact via the email address provided in the Privacy Policy or open an issue on GitHub.
+For issues with this website repository, contact via the email address provided in the Privacy
+Policy or open an issue on GitHub.
