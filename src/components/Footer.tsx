@@ -50,34 +50,13 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer
-      className="text-center"
-      style={{
-        fontSize: '0.8em',
-        marginTop: '3rem',
-        marginBottom: '3rem',
-        color: '#FF7A1A',
-      }}
-    >
-      <p style={{ fontVariantNumeric: 'tabular-nums' }}>
+    <footer className="mb-12 mt-12 text-center text-[0.8em] text-neuracue-orange">
+      <p className="tabular-nums">
         © <span id="year">{year}</span> NeuraCue™ All rights reserved
         <span id="clock" className="ts">
           {time}
         </span>
       </p>
-      <style jsx>{`
-        #clock.ts::before {
-          content: '';
-          display: inline-block;
-          width: 0.35em;
-          height: 0.35em;
-          margin: 0 0.5ch 0 0.7ch;
-          background: currentColor;
-          border-radius: 50%;
-          vertical-align: middle;
-          transform: translateY(-0.06em);
-        }
-      `}</style>
     </footer>
   );
 }

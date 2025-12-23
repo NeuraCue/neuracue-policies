@@ -25,3 +25,11 @@
     @apply text-neuracue-link transition-colors hover:underline;
   }
 }
+
+@layer components {
+  #clock.ts::before {
+    content: '';
+    @apply ml-[0.7ch] mr-[0.5ch] inline-block h-[0.35em] w-[0.35em] rounded-full bg-current align-middle;
+    transform: translateY(-0.06em);
+  }
+}
