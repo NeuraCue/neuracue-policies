@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import CurrentDate from '@/components/CurrentDate';
 import Contact from '@/components/Contact';
 
 export const metadata: Metadata = {
@@ -21,7 +20,7 @@ export default function PrivacyPage() {
       <div className="mb-8 text-center">
         <h1 className="mb-4">Privacy Policy</h1>
         <p className="text-gray-300">
-          <strong>Effective date:</strong> <CurrentDate />
+          <strong>Effective Date:</strong> 01 JAN 2026
         </p>
       </div>
 
