@@ -4,16 +4,17 @@
 
 @layer base {
   body {
-    @apply bg-neuracue-blue text-white min-h-screen;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    @apply min-h-screen bg-neuracue-blue text-white;
+    font-family:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-3xl font-bold md:text-4xl;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl font-semibold mt-8 mb-4;
+    @apply mb-4 mt-8 text-2xl font-semibold md:text-3xl;
   }
 
   p {
@@ -21,6 +22,14 @@
   }
 
   a {
-    @apply text-neuracue-link hover:underline transition-colors;
+    @apply text-neuracue-link transition-colors hover:underline;
+  }
+}
+
+@layer components {
+  #clock.ts::before {
+    content: '';
+    @apply ml-[0.7ch] mr-[0.5ch] inline-block h-[0.35em] w-[0.35em] rounded-full bg-current align-middle;
+    transform: translateY(-0.06em);
   }
 }
