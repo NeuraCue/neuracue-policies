@@ -168,12 +168,10 @@ export default function AboutPage() {
               <h3 className="mb-2 text-2xl font-bold text-neuracue-link">Phase 1: Core</h3>
               <p className="mb-0 text-xl">Offline-first strategy (local cache)</p>
               <p className="mb-0 text-xl">Battery-optimized background service</p>
-              <p className="mb-0 text-xl">Google Maps integration for location selection</p>
+              <p className="mb-0 text-xl">Google Maps integration (geofence)</p>
               <p className="mb-0 text-xl">Coherent, user-friendly permission flow</p>
               <p className="mb-0 text-xl">Reliable geofencing implementation</p>
               <p className="mb-0 text-xl">Notification system that actually works</p>
-              <p className="mb-0 text-xl">Core Cue CRUD</p>
-              <p className="mb-0 text-xl">Basic Cue Management UI</p>
             </div>
             <div className="rounded-lg bg-white/5 p-6 text-center">
               <h3 className="mb-2 text-2xl font-bold text-neuracue-link">Phase 2: Auth</h3>
