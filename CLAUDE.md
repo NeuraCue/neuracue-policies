@@ -156,6 +156,7 @@ vercel --prod
 
 1. Create new directory in `src/app/` (e.g., `src/app/about/`)
 2. Add `page.tsx` file:
+
    ```typescript
    import type { Metadata } from 'next';
 
@@ -174,6 +175,7 @@ vercel --prod
      );
    }
    ```
+
 3. Update `public/sitemap.xml` with new page URL
 4. Link from existing pages using Next.js `<Link>` component
 
@@ -203,9 +205,9 @@ Edit `src/app/layout.tsx` metadata export:
 
 ```typescript
 export const metadata: Metadata = {
-    title: 'NeuraCue',
-    description: 'Policy and compliance pages for the NeuraCue Android app...',
-    // ...
+  title: 'NeuraCue',
+  description: 'Policy and compliance pages for the NeuraCue Android app...',
+  // ...
 };
 ```
 
@@ -215,8 +217,8 @@ Edit `src/app/globals.css`:
 
 ```css
 body {
-    background: #191970; /* Dark blue */
-    color: #fff; /* White text */
+  background: #191970; /* Dark blue */
+  color: #fff; /* White text */
 }
 ```
 
@@ -236,6 +238,7 @@ Footer accent color in `src/components/Footer.tsx`:
 
 1. Place images in `public/assets/images/`
 2. Reference in components:
+
    ```typescript
    import Image from 'next/image';
 
@@ -247,6 +250,7 @@ Footer accent color in `src/components/Footer.tsx`:
      unoptimized
    />
    ```
+
 3. Optimize images before adding (use WebP or optimized PNG/JPG)
 4. Update metadata for social sharing in page.tsx
 
@@ -255,7 +259,7 @@ Footer accent color in `src/components/Footer.tsx`:
 The clock displays Pacific time by default. To change timezone, edit `src/components/Footer.tsx`:
 
 ```typescript
-const ZONE = 'America/Los_Angeles';  // Change to desired timezone
+const ZONE = 'America/Los_Angeles'; // Change to desired timezone
 ```
 
 ## Git Workflow
@@ -290,10 +294,10 @@ git push origin main
 
 - **This is a public repository** — never commit sensitive data (API keys, credentials, PII)
 - **Vercel deployment**:
-    - Automatic builds from `main` branch
-    - Deploy previews for all branches
-    - Custom domain configured via Vercel dashboard
-    - Edge network for fast global delivery
+  - Automatic builds from `main` branch
+  - Deploy previews for all branches
+  - Custom domain configured via Vercel dashboard
+  - Edge network for fast global delivery
 - **Mobile app is private** — This repo only contains web presence; actual Android app is in a
   separate private repository
 - **Custom domain**: Configured through DNS provider (pointing to Vercel) + `public/CNAME` file

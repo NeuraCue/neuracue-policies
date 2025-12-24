@@ -1,0 +1,27 @@
+# Build outputs
+.next
+out
+dist
+build
+
+# Dependencies
+node_modules
+
+# Cache
+.cache
+.vercel
+
+# Logs
+*.log
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Auto-generated
+next-env.d.ts
+.next/types
+
+# Public assets (don't format)
+public/

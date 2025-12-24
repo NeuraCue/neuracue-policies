@@ -13,7 +13,7 @@ It serves as the landing and compliance site for the NeuraCue Android applicatio
 ## 📁 Project Structure
 
 | File/Directory    | Description                                                 |
-|-------------------|-------------------------------------------------------------|
+| ----------------- | ----------------------------------------------------------- |
 | `src/app/`        | Next.js App Router pages and layouts                        |
 | `src/components/` | Reusable React components                                   |
 | `public/`         | Static assets (images, favicon, robots.txt, sitemap, CNAME) |
